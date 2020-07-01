@@ -1,10 +1,10 @@
 import io.restassured.RestAssured;
 import org.testng.annotations.Test;
 
-public class Client {
+public class GetClient {
 
     @Test
-    public void getClient() {
+    public void listClients() {
 
         RestAssured.baseURI = "https://dev-853759.okta.com/oauth2/v1/clients";
         RestAssured
