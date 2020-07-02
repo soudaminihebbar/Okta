@@ -1,5 +1,5 @@
 {
-  "client_name": "Web client 12",
+  "client_name": "Web client 24",
   "redirect_uris": [
     "https://httpbin.org/get"
   ],
