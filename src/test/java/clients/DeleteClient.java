@@ -1,3 +1,5 @@
+package clients;
+
 import io.restassured.RestAssured;
 import org.testng.annotations.Test;
 
