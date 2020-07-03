@@ -5,9 +5,10 @@ import org.testng.annotations.Test;
 
 public class GetClient {
 
+    CreateClient createClient = new CreateClient();
+
     @Test
     public void listClients() {
-
         RestAssured.baseURI = "https://dev-853759.okta.com/oauth2/v1/clients";
         RestAssured
                 .given()
@@ -19,15 +20,13 @@ public class GetClient {
 
     @Test
     public void getClientById() {
-        CreateClient createClient = new CreateClient();
-        createClient.createClient();
-        String clientId = createClient.clientId;
         RestAssured.baseURI = "https://dev-853759.okta.com/oauth2/v1/clients";
         RestAssured
                 .given()
                 .header("Authorization", "SSWS 00UgR1Qm7xVZ7rJMnkQQgvnIopBc3sDzrm7Zj0wXkK")
-                .get(clientId)
+                .get(createClient.clientId)
         .then()
         .statusCode(200);
+
     }
 }

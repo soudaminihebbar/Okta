@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 import java.io.File;
 
 public class CreateClient {
-    String clientId;
+    public static String clientId;
 
     final File clientdata = new File("clientdata.json");
 
@@ -17,7 +17,6 @@ public class CreateClient {
     public void createClient() {
 
         RestAssured.baseURI = "https://dev-853759.okta.com/oauth2/v1/clients";
-
         Response response = RestAssured
                 .given()
                 .header("Authorization", "SSWS 00UgR1Qm7xVZ7rJMnkQQgvnIopBc3sDzrm7Zj0wXkK")
