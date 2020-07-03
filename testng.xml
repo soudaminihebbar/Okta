@@ -1,0 +1,11 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="Suite">
+    <test name="Client">
+        <classes>
+            <class name="clients.CreateClient" />
+            <class name="clients.GetClient" />
+            <class name="clients.DeleteClient" />
+        </classes>
+    </test>
+</suite>
